@@ -1,7 +1,7 @@
-var express = require('express')
-var cors = require('cors')
-var fetch = require('node-fetch') // Asegúrate de tenerlo instalado
-var axios = require('axios')
+import express from 'express'
+import cors from 'cors'
+import fetch from 'node-fetch'
+import axios from 'axios'
 
 // 🔥 Desactiva la verificación SSL en Node.js
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
