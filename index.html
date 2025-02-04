@@ -57,7 +57,7 @@
 
             async function getCircuitos() {
                 try {
-                    const response = await fetch('http://localhost:3000/circuitos', {
+                    const response = await fetch('https://proxy-boletos-peru.vercel.app/circuitos', {
                         method: 'GET'
                     })
 
@@ -76,7 +76,7 @@
 
             async function getFechas(){
                 try {
-                    const response = await fetch('http://localhost:3000/fechas?nidruta=' + new_consulta.value.nidruta, {
+                    const response = await fetch('https://proxy-boletos-peru.vercel.app/fechas?nidruta=' + new_consulta.value.nidruta, {
                         method: 'GET'
                     })
 
@@ -111,7 +111,7 @@
                 grecaptcha.ready(function() {
                     grecaptcha.execute('6LcPEssqAAAAAH5EAlsW7nC_CZmjwFvUEUkmiqn_', {action: 'submit'}).then(async function(token) {
                         try {
-                            const response = await fetch(`http://localhost:3000/cupos?df_inicio=${flatpickr.formatDate(new Date(new_consulta.value.fecha), "d-m-Y")}&nidcircuito=${new_consulta.value.nidcircuito}&nidlugar=llaqta_machupicchu&nidruta=${new_consulta.value.nidruta}&token=${token}`, {
+                            const response = await fetch(`https://proxy-boletos-peru.vercel.app/cupos?df_inicio=${flatpickr.formatDate(new Date(new_consulta.value.fecha), "d-m-Y")}&nidcircuito=${new_consulta.value.nidcircuito}&nidlugar=llaqta_machupicchu&nidruta=${new_consulta.value.nidruta}&token=${token}`, {
                                 method: 'GET'
                             })
 
